@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: quilldesk
+
+  # H2 Database Setup
+  datasource:
+    url: jdbc:h2:mem:quilldeskdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 
+
+  # Web console for inspecting the H2 db in the browser
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  # JPA and Hibernate config
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        highlight_sql: true
+    # Tell Hibernate to create the schema BEFORE data.sql runs
+    defer-datasource-initialization: true
+
+  # Run data.sql on startup to initialize the in-memory db
+  sql:
+    init:
+      mode: always
+
+server:
+  port: 8080
