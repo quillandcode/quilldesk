@@ -26,7 +26,7 @@ public class Ticket {
     private String title;
 
     @Column(length = 2000)
-    private String description;
+    private String name;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "creator_id", nullable = false)

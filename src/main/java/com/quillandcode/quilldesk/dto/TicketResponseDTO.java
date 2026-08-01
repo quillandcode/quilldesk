@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 public record TicketResponseDTO(
     Long id,
     String title,
-    String description,
+    String name,
     String status,
     String priority,
     String creatorName,

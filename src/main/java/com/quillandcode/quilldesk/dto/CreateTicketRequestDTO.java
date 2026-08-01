@@ -7,8 +7,8 @@ public record CreateTicketRequestDTO(
     @NotBlank(message = "Title is required") 
     String title,
     
-    @NotBlank(message = "Description is required") 
-    String description,
+    @NotBlank(message = "Name is required") 
+    String name,
     
     @NotNull(message = "Priority ID is required") 
     Long priorityId,
