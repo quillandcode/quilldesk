@@ -1,0 +1,21 @@
+# IDE files
+.vscode/
+.idea/
+
+# Build output
+/target/
+**/target/
+
+# Maven
+.mvn/wrapper/maven-wrapper.jar
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
